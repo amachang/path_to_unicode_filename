@@ -10,11 +10,13 @@
 //! # Examples
 //! 
 //! ```rust
-//! to_filename("/tmp/file.txt") // => ／tmp／file.txt
+//! use path_to_unicode_filename::*;
+//!
+//! assert_eq!(to_filename("/tmp/file.txt"), Ok("／tmp／file.txt".into()));
 //! 
-//! to_filename("C:\\Users\\alice\\file.txt") // => 💠🏠alice＼file.txt
+//! assert_eq!(to_filename("C:\\Users\\alice\\file.txt"), Ok("💠🏠alice＼file.txt".into()));
 //! 
-//! to_filename("/Users/alice/Documents/file.txt") // => 🍎📄alice／file.txt
+//! assert_eq!(to_filename("/Users/alice/Documents/file.txt"), Ok("🍎📄alice／file.txt".into()));
 //! ```
 //!
 

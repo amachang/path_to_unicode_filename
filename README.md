@@ -17,11 +17,13 @@ It replaces path chars as below:
 ## Examples
 
 ```rust
-to_filename("/tmp/file.txt") =>  // => ／tmp／file.txt
+use path_to_unicode_filename::*;
 
-to_filename("C:\\Users\\alice\\file.txt") // => 💠🏠alice＼file.txt
-
-to_filename("/Users/alice/Documents/file.txt") // => 🍎📄alice／file.txt
+assert_eq!(to_filename("/tmp/file.txt"), Ok("／tmp／file.txt".into()));
+ 
+assert_eq!(to_filename("C:\\Users\\alice\\file.txt"), Ok("💠🏠alice＼file.txt".into()));
+ 
+assert_eq!(to_filename("/Users/alice/Documents/file.txt"), Ok("🍎📄alice／file.txt".into()));
 ```
 
 License: MIT OR Apache-2.0
