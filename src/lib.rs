@@ -1,3 +1,23 @@
+//! The library encodes file path separators and common directory names, producing a reversible unicode string that can be used as a filename. It's useful in the case when you want to extract data or features from any file and store them in a specific directory.
+//! 
+//! It replaces path chars as below:
+//! 
+//! - chars `\/:*?"<>|` be replaced to full width alternative chars of unicode.
+//! - U+0000 be replaced to `〇`.
+//! - a common directory, like home, documents, pictures, etc are replaced to a OS icon (🍎, 🐧, etc) and a directory icon (🏠, 📄, 🎨, etc).
+//! - chars replacements for others be replaced to twice-sequential chars itself
+//! 
+//! # Examples
+//! 
+//! ```rust
+//! to_filename("/tmp/file.txt") // => ／tmp／file.txt
+//! 
+//! to_filename("C:\\Users\\alice\\file.txt") // => 💠🏠alice＼file.txt
+//! 
+//! to_filename("/Users/alice/Documents/file.txt") // => 🍎📄alice／file.txt
+//! ```
+//!
+
 use std::{
     path::{
         Path,
