@@ -1,6 +1,6 @@
 [package]
 name = "path_to_unicode_filename"
-version = "0.1.0"
+version = "0.1.1"
 edition = "2021"
 description = "The library encodes file path separators and common directory names, producing a reversible unicode string that can be used as a filename. It's useful in the case when you want to extract data or features from any file and store them in a specific directory."
 license = "MIT OR Apache-2.0"

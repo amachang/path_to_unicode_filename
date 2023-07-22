@@ -19,11 +19,15 @@ It replaces path chars as below:
 ```rust
 use path_to_unicode_filename::*;
 
+// make a filename
 assert_eq!(to_filename("/tmp/file.txt"), Ok("／tmp／file.txt".into()));
- 
 assert_eq!(to_filename("C:\\Users\\alice\\file.txt"), Ok("💠🏠alice＼file.txt".into()));
- 
 assert_eq!(to_filename("/Users/alice/Documents/file.txt"), Ok("🍎📄alice／file.txt".into()));
+
+// restore the filename to the original path
+assert_eq!(to_path("／var／log／file.txt"), Ok("/var/log/file.txt".into()));
+assert_eq!(to_path("🐧🥞sdcard001／file.txt"), Ok("/media/sdcard001/file.txt".into()));
+assert_eq!(to_path("🍎🎨bob／file.png"), Ok("/Users/bob/Pictures/file.png".into()));
 ```
 
 License: MIT OR Apache-2.0
