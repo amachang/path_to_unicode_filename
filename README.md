@@ -1,7 +1,7 @@
 [![GitHub Workflow Status (with event)](https://img.shields.io/github/actions/workflow/status/amachang/path_to_unicode_filename/test.yml?label=test)](https://github.com/amachang/path_to_unicode_filename/actions/workflows/test.yml)
 [![Codecov](https://img.shields.io/codecov/c/github/amachang/path_to_unicode_filename)](https://app.codecov.io/gh/amachang/path_to_unicode_filename)
 [![docs.rs](https://img.shields.io/docsrs/path_to_unicode_filename)](https://docs.rs/path_to_unicode_filename/latest/path_to_unicode_filename/)
-[![Crates.io](https://img.shields.io/crates/l/path_to_unicode_filename)](https://crates.io/crates/path_to_unicode_filename)
+[![Crates.io](https://img.shields.io/crates/l/path_to_unicode_filename?)](https://crates.io/crates/path_to_unicode_filename)
 [![Crates.io](https://img.shields.io/crates/d/path_to_unicode_filename)](https://crates.io/crates/path_to_unicode_filename)
 
 # path\_to\_unicode\_filename
